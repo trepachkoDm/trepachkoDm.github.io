@@ -3,10 +3,10 @@
 ### Тестовое задание
 
 1 Задание 
-* [Верстка](https://trepachkodm.github.io/test/site.html "Верстка")
+* [Верстка](https://trepachkodm.github.io/test/site.html)
 
 2 Задание
-* простые числа в интервале от 1 до 1000
+* [Простые числа в интервале от 1 до 1000] (https://trepachkodm.github.io/test/simply.html)
 
 3 Задание
 * [Анкета_if] [https://trepachkodm.github.io/test/anketa_if.html]
