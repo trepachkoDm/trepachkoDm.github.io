@@ -10,7 +10,7 @@
 
 3 Задание
 * [Анкета_if](https://trepachkodm.github.io/test/anketa_if.html)
-* [Анкета_oper]
+* [Анкета_oper](https://trepachkoDm.github.io/test/anketa_oper.html)
 
 4 Задание
-* words
+* [Words](https://trepachkoDm.github.io/test/words.html)
