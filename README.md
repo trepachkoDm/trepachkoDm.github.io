@@ -14,3 +14,8 @@
 
 4 Задание
 * [Words](https://trepachkoDm.github.io/test/words.html)
+
+### Домашние задание
+
+1 lesson
+* [Анкета](https://trepachkoDm.github.io/lesson1/anketa.html)
