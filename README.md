@@ -6,10 +6,10 @@
 * [Верстка](https://trepachkodm.github.io/test/site.html)
 
 2 Задание
-* [Простые числа в интервале от 1 до 1000] (https://trepachkodm.github.io/test/simply.html)
+* [Простые числа в интервале от 1 до 1000](https://trepachkodm.github.io/test/simply.html)
 
 3 Задание
-* [Анкета_if] [https://trepachkodm.github.io/test/anketa_if.html]
+* [Анкета_if](https://trepachkodm.github.io/test/anketa_if.html)
 * [Анкета_oper]
 
 4 Задание
