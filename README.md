@@ -17,5 +17,5 @@
 
 ### Домашние задания
 
-1 lesson
+1 lesson 
 * [Анкета](https://trepachkoDm.github.io/lesson1/anketa.html)
