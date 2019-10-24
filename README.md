@@ -18,4 +18,8 @@
 ### Домашние задания
 
 1 lesson 
-* [Анкета](https://trepachkoDm.github.io/lesson1/anketa.html)   
+* [Анкета](https://trepachkoDm.github.io/lesson1/anketa.html)
+
+2 lesson
+* [TreeSum](https://trepachkoDm.github.io/lesson2/treeSum.html)
+* [Vowels](https://trepachkoDm.github.io/lesson2/vowels.html)
