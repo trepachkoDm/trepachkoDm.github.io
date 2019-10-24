@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vowels</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        var text= prompt("Введите текст","");
+        var  words= str => str.split("").filter(vowels => "аоиеёэыуюяАОИЕЁЭУЮЯ".includes(vowels)).length;
+        console.log(words(text));
+    </script>
+</body>
+</html>
