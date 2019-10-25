@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vowels</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        var str = prompt('Введите строку', '');
+        function vowels(words) {
+            var vowelsArr = ['а', 'о', 'и', 'е', 'ё', 'э', 'ы', 'у', 'ю', 'я'];
+            return words.toLowerCase().split('').filter(element => {
+                return vowelsArr.indexOf(element) !== -1;}).length;
+        }
+        console.log("Количество гласных: "+ vowels(str));
+    </script>
+</body>
+</html>
