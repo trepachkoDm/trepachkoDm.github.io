@@ -24,4 +24,12 @@
 * [TreeSum](https://trepachkoDm.github.io/lesson2/treeSum.html)
 * [Vowels](https://trepachkoDm.github.io/lesson2/vowels.html)
 
+3 lesson
+* [ForEach](https://trepachkoDm.github.io/lesson3/forEach.html)
+* [Reduce](https://trepachkoDm.github.io/lesson3/reduce.html)
+* [Mood](https://trepachkoDm.github.io/lesson3/Mood.html)
+* [HashStorageFunc](https://trepachkoDm.github.io/lesson3/HashStorageFunc.html)
+
+
+
 
