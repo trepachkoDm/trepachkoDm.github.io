@@ -5,33 +5,87 @@
     <title>Title</title>
 </head>
 <body>
+<div>
+        <input type="button" value="ввод информации о напитке" onclick="addValue()">
+    </div>
+    <br>
+    <div>
+        <input type="button" value="получение информации о напитке" onclick="getValue()">
+    </div>
+    <br>
+    <div>
+        <input type="button" value="удаление информации о напитке" onclick="deleteValue()">
+    </div>
+    <br>
+    <div>
+        <input type="button" value="перечень всех напитков" onclick="getKeys()">
+    </div>
 <script>
-    "use strict";
-    class HashStorageFunc {
-        constructor () {
-            this.storage={};
-        }
-        addValue (key,value) {
-            this.storage[key]=value;
-        }
-        getValue (key) {
-            return this.storage[key];
-        }
-        deleteValue(key) {
-            if (key in this.storage) {
-                delete this.storage[key];
-                return true;
+        class HashStorageFunc {
+            constructor () {
+                this.storage={};
             }
-            else {
-                return false;
+            addValue (key,value) {
+                this.storage[key]=value;
+            }
+            getValue (key) {
+                return this.storage[key];
+            }
+            deleteValue(key) {
+                if (key in this.storage) {
+                    delete this.storage[key];
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            getKeys() {
+                return Object.keys(this.storage);
             }
         }
-        getKeys() {
-            return Object.keys(this.storage);
+    var drinkStorage = new HashStorageFunc();
+    function addValue() {
+        var drinkName = prompt("Введите название напитка", " ");
+        var alco = confirm("Напиток алкогольный?");
+        if (alco) {
+            alco="да";
+        }
+        else {
+            alco="нет";
+        }
+        var recipe = prompt("Введите рецепт напитка", " ");
+        drinkStorage.addValue(drinkName,{a:alco, r:recipe});
+    }
+    function  getValue() {
+        var drinkName = prompt("Введите название напитка", " ");
+        var info = drinkStorage.getValue(drinkName);
+        if (info) {
+            alert("Название напитка: "+ drinkName +"\n\r " + "Алкогольный: " + info.a + '\n\r '+
+                "Рецепт приготовления: " + info.r);
+        }
+        else {
+            alert("Напиток не найден!");
         }
     }
-
+    function deleteValue(){
+        var drinkName = prompt("Введите название напитка", " ");
+        var del = drinkStorage.deleteValue(drinkName);
+        if (del) {
+            alert("Информация о напитке " + "'" + drinkName + "'" + " удалена!");
+        }
+        else {
+            alert("Напиток " + "'" + drinkName + "'" + " в списке отсутствует!")
+        }
+    }
+    function getKeys(){
+        var drinks = drinkStorage.getKeys();
+        if (drinks.length > 0) {
+            alert(drinks);}
+        else {
+            alert("Список пуст!")
+        }
+    }
 </script>
-
 </body>
 </html>
