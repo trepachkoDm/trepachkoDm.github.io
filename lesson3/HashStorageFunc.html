@@ -2,57 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>DRINKS_HASH_FUNC</title>
 </head>
 <body>
-    <div>
-        <input type="button" value="ввод информации о напитке" onclick="addValue()">
-    </div>
-    <br>
-    <div>
-        <input type="button" value="получение информации о напитке" onclick="getValue()">
-    </div>
-    <br>
-    <div>
-        <input type="button" value="удаление информации о напитке" onclick="deleteValue()">
-    </div>
-    <br>
-    <div>
-        <input type="button" value="перечень всех напитков" onclick="getKeys()">
-    </div>
+<div>
+    <input type="button" value="ввод информации о напитке" onclick="addValue()">
+</div>
+<br>
+<div>
+    <input type="button" value="получение информации о напитке" onclick="getValue()">
+</div>
+<br>
+<div>
+    <input type="button" value="удаление информации о напитке" onclick="deleteValue()">
+</div>
+<br>
+<div>
+    <input type="button" value="перечень всех напитков" onclick="getKeys()">
+</div>
 <script>
-        class HashStorageFunc {
-            constructor () {
-                this.storage={};
+    function HashStorage() {
+        this.storage = {};
+        this.addValue = function(key, value ) {
+            this.storage[key] = value;
+        };
+        this.getValue = function(key) {
+            return this.storage[key];
+        };
+        this.deleteValue = function(key) {
+            if (key in this.storage) {
+                delete this.storage[key];
+                return true;
             }
-            addValue (key,value) {
-                this.storage[key]=value;
+            else {
+                return false;
             }
-            getValue (key) {
-                return this.storage[key];
-            }
-            deleteValue(key) {
-                if (key in this.storage) {
-                    delete this.storage[key];
-                    return true;
-                }
-                else {
-                    return false;
-                }
-            }
-            getKeys() {
-                return Object.keys(this.storage);
-            }
+        };
+        this.getKeys = function() {
+            return Object.keys(this.storage);
         }
-    var drinkStorage = new HashStorageFunc();
+    }
+    var drinkStorage = new HashStorage;
     function addValue() {
         var drinkName = prompt("Введите название напитка", " ");
         var alco = confirm("Напиток алкогольный?");
         if (alco) {
-            alco="да";
+            alco = "да";
         }
         else {
-            alco="нет";
+            alco = "нет";
         }
         var recipe = prompt("Введите рецепт напитка", " ");
         drinkStorage.addValue(drinkName,{a:alco, r:recipe});
@@ -61,8 +59,8 @@
         var drinkName = prompt("Введите название напитка", " ");
         var info = drinkStorage.getValue(drinkName);
         if (info) {
-            alert("Название напитка: "+ drinkName +"\n\r " + "Алкогольный: " + info.a + '\n\r '+
-                "Рецепт приготовления: " + info.r);
+            alert("Название напитка: "+ drinkName +"\n\r " + "Алкогольный: " + info.a + '\n\r '
+                + "Рецепт приготовления: " + info.r);
         }
         else {
             alert("Напиток не найден!");
@@ -79,9 +77,9 @@
         }
     }
     function getKeys(){
-        var drinks = drinkStorage.getKeys();
+        var drinks = drinkStorage.getKey();
         if (drinks.length > 0) {
-            alert(drinks);}
+        alert(drinks);}
         else {
             alert("Список пуст!")
         }
