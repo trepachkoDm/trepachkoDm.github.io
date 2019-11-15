@@ -29,6 +29,10 @@
 * [Reduce](https://trepachkoDm.github.io/lesson3/reduce.html)
 * [Mood](https://trepachkoDm.github.io/lesson3/Mood.html)
 * [HashStorageFunc](https://trepachkoDm.github.io/lesson3/HashStorageFunc.html)
+* [HashStorageClass](https://trepachkoDm.github.io/lesson3/DRINKS_HASH_CLASS.html)
+
+4 lesson
+* [Roots](https://trepachkoDm.github.io/lesson4/Roots2.html)
 
 
 
