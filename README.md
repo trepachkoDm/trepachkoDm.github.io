@@ -37,6 +37,9 @@
 5 lesson
 * [DynForm](https://trepachkoDm.github.io/lesson5/DYN_FORM.html)
 
+6 lesson
+* [ValidForm] (https://trepachkoDm.github.io/Lesson6/VALID_FORM.html
+
 
 
 
