@@ -39,6 +39,7 @@
 
 6 lesson
 * [ValidForm](https://trepachkoDm.github.io/Lesson6/VALID_FORM.html) 
+* [DrangDrop](https://trepachkoDm.github.io/Lesson6/DRAGNDROP.html)
 
 
 
