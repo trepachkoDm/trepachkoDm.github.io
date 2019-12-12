@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VALID_FORM</title>
+</head>
+<body>
+    <p>Для внесения вашего сайта в каталог, заполните форму:</p>
+        <form method="post" action="http://fe.it-academy.by/TestForm.php" name="myform" novalidate>
+
+        <label>Разработчики:</label>
+        <input type="text" name="razrab">
+        <span id="razrabError"></span><br>
+
+        <label>Название сайта:</label>
+        <input type="text" name="nameSite">
+        <span id="nameSiteError"></span><br>
+
+        <label>URL сайта:</label>
+        <input type="text" name="urlSite">
+        <span id="urlSiteError"></span><br>
+
+        <label>Дата запуска сайта:</label>
+        <input type="date" name="startDate">
+        <span id="startDateError"></span><br>
+
+        <label>Посетителей в сутки:</label>
+        <input type="text" name="visitors">
+        <span id="visitorsError"></span><br>
+
+        <label>E-mail для связи:</label>
+        <input type="email" name="email">
+        <span id="emailError"></span><br>
+
+        <label>Рубрика каталога:</label>
+        <select name="rubric">
+            <option value=1>здоровье</option>
+            <option value=2>домашний уют</option>
+            <option value=3 selected>бытовая техника</option>
+        </select>
+        <span id="rubricError"></span><br>
+
+        <label>Размещение:</label>
+        <div id="variants">
+            <input type="radio" name="radioVar" value="free" id="radioFirst"><span>бесплатное</span>
+            <input type="radio" name="radioVar" value="pay" ><span>платное</span>
+            <input type="radio" name="radioVar" value="vip" ><span>VIP</span>
+        </div>
+            <span id="variantsError"></span>
+
+        <label>Разрешить отзывы:</label>
+        <input type="checkbox" name="comments">
+        <span id="commentError"></span><br>
+
+        <label>Описание сайта:</label><br>
+        <textarea name="description" cols="40" rows="15"></textarea>
+        <span id="descriptionError"></span><br>
+        <input type="submit" name="submit" value="Опубликовать">
+    </form>
+
+    <script>
+        "use strict";
+        // поле РАЗРАБОТЧИКИ, проверка на пустое поле
+        function razrabValid(fwe) {
+            var formObj = document.forms.myform;
+            var razrabElem = formObj.elements.razrab;
+            var razrabValue = razrabElem.value;
+
+            if (razrabValue == "") {
+              document.getElementById("razrabError").innerHTML = "Поле не может быть пустым, пожалуйста, введите данные!";
+                razrabError.style.color="red";
+                if (fwe) razrabElem.focus();
+              return false;
+            }
+            else {
+                document.getElementById("razrabError").innerHTML = "";
+                return true;
+            }
+        }
+        // поле НАЗВАНИЕ САЙТА, проверка на пустое поле
+        function nameSiteValid(fwe) {
+            var formObj = document.forms.myform;
+            var nameSiteElem = formObj.elements.nameSite;
+            var nameSiteValue = nameSiteElem.value;
+
+            if (nameSiteValue == "") {
+                document.getElementById("nameSiteError").innerHTML = "Поле не может быть пустым, пожалуйста, введите данные!";
+                nameSiteError.style.color="red";
+                if (fwe) nameSiteElem.focus();
+                return false;
+            }
+            else {
+                document.getElementById("nameSiteError").innerHTML = "";
+                return true;
+            }
+        }
+        // поле URL САЙТА, проверка на пустое поле
+        function urlSiteValid (fwe) {
+            var formObj = document.forms.myform;
+            var urlSiteElem = formObj.elements.urlSite;
+            var urlSiteValue = urlSiteElem.value;
+
+            if (urlSiteValue == "") {
+                document.getElementById("urlSiteError").innerHTML = "Поле не может быть пустым, пожалуйста, введите данные!";
+                urlSiteError.style.color="red";
+                if (fwe) urlSiteElem.focus();
+                return false;
+            }
+            else {
+                document.getElementById("urlSiteError").innerHTML = "";
+                return true;
+            }
+        }
+        //поле ДАТА ЗАПУСКА, проверка на пустое поле
+        function startDateValid(fwe) {
+            var formObj = document.forms.myform;
+            var startDateElem = formObj.elements.startDate;
+            var startDateValue = startDateElem.value;
+
+            if (startDateValue == "") {
+                document.getElementById("startDateError").innerHTML = "Вам необходимо выбрать дату, она не может быть пустой!";
+                startDateError.style.color="red";
+                if (fwe) startDateElem.focus();
+                return false;
+            }
+            else {
+                document.getElementById("startDateError").innerHTML = "";
+                return true;
+            }
+        }
+        // поле ПОСЕТИТЕЛЕЙ В СУТКИ, проверка на пустое поле и корректную цифру
+        function visitorsValid (fwe) {
+            var formObj = document.forms.myform;
+            var visitorsElem = formObj.elements.visitors;
+            var visitorsValue = visitorsElem.value;
+
+            if (visitorsValue == "") {
+                document.getElementById("visitorsError").innerHTML = "Поле не может быть пустым, пожалуйста, введите данные!";
+                visitorsError.style.color = "red";
+                if (fwe) visitorsElem.focus();
+                return false;
+            }
+            else if(isNaN(visitorsValue)) {
+                document.getElementById("visitorsError").innerHTML = "Количество посетителей должно быть указано корректной цифрой!";
+                visitorsError.style.color = "red";
+                if (fwe) visitorsElem.focus();
+                return false;
+            }
+            else{
+                document.getElementById("visitorsError").innerHTML = "";
+                return true;
+            }
+        }
+
+        // поле E-MAIL ДЛЯ СВЯЗИ, проверка на пустое поле и наличие @
+        function emailValid(fwe) {
+            var formObj = document.forms.myform;
+            var emailElem = formObj.elements.email;
+            var emailValue = emailElem.value;
+
+            if(emailValue == ""){
+                document.getElementById("emailError").innerHTML = "Поле не может быть пустым, пожалуйста, введите данные!";
+                emailError.style.color = "red";
+                if (fwe) emailElem.focus();
+                return false;
+            }
+            else if(!emailValue.includes("@")) {
+                document.getElementById("emailError").innerHTML = "Проверьте корректность введеной почты";
+                emailError.style.color = "red";
+                if (fwe) emailElem.focus();
+                return false;
+            }
+            else{
+                document.getElementById("emailError").innerHTML = "";
+                return true;
+            }
+        }
+
+        //поле РУБРИКА, рубрика "бытовая техника" недоступна, нужно выбрать другую
+        function rubricValid(fwe) {
+            var formObj = document.forms.myform;
+            var rubricElem = formObj.elements.rubric;
+            var rubricValue = rubricElem.value;
+
+            if(rubricValue == 3) {
+                document.getElementById("rubricError").innerHTML = "Данная рубрика, к сожалению, недоступна, выберите другой вариант!";
+                rubricError.style.color = "red";
+                if (fwe) rubricElem.focus();
+                return false;
+            }
+            else{
+                document.getElementById("rubricError").innerHTML = "";
+                return true;
+            }
+        }
+        //поле РАЗМЕЩЕНИЕ, вариант vip не доступен и проверка на пустое поле
+        function variantsValid(fwe) {
+            var formObj = document.forms.myform;
+            var variantsElem = formObj.elements.radioVar;
+            var variantsValue = variantsElem.value;
+
+            if(variantsValue == ""){
+                document.getElementById("variantsError").innerHTML = "Поле не может быть пустым, пожалуйста, введите данные!";
+                variantsError.style.color = "red";
+                if (fwe) {
+                    document.getElementById("radioFirst").scrollIntoView();
+                }
+                return false;
+            }
+            else if (variantsValue == "vip"){
+                document.getElementById("variantsError").innerHTML ="Вариант VIP, к сожалению, недоступен, выберите другой вариант!";
+                variantsError.style.color = "red";
+                if (fwe) {
+                    document.getElementById("radioFirst").scrollIntoView();
+                }
+                return false;
+            }
+            else{
+                document.getElementById("variantsError").innerHTML = "";
+                return true;
+            }
+        }
+        //поле РАЗРЕШИТЬ ОТЗЫВЫ, проверка на наличие галочки
+        function commentsValid(fwe) {
+            var formObj = document.forms.myform;
+            var commentsElem = formObj.elements.comments;
+            var commentsValue = commentsElem.value.checked;
+
+            if(!commentsValue){
+                document.getElementById("commentsError").innerHTML = "Вам необходимо дать согласие на отзывы!";
+                commentsError.style.color = "red";
+                if (fwe) commentsElem.focus();
+                return false;
+            }
+            else {
+                document.getElementById("commentsError").innerHTML = "";
+                return true;
+            }
+        }
+        //поле ОПИСАНИЕ САЙТА, проверка на пустое поле и текст должен быть более 10 символов
+        function descriptionValid(fwe) {
+            var formObj = document.forms.myform;
+            var descriptionElem = formObj.elements.description;
+            var descriptionValue = descriptionElem.value;
+
+            if (descriptionValue == "") {
+                document.getElementById("descriptionError").innerHTML = "Поле не может быть пустым, пожалуйста, введите данные!";
+                descriptionError.style.color = "red";
+                if (fwe) descriptionElem.focus();
+                return false;
+            }
+            else if (descriptionValue.length < 10) {
+                    document.getElementById("descriptionError").innerHTML = "Описание сайта должно содержать более 10 символов!";
+                    descriptionError.style.color = "red";
+                    if (fwe) descriptionElem.focus();
+                    return false;
+            }
+            else{
+                document.getElementById("descriptionError").innerHTML = "";
+                return true;
+            }
+        }
+
+        document.forms.myform.elements.razrab.addEventListener("blur", (EO)=> razrabValid(false));
+        document.forms.myform.elements.nameSite.addEventListener("blur", (EO)=> nameSiteValid(false));
+        document.forms.myform.elements.urlSite.addEventListener("blur", (EO)=> urlSiteValid(false));
+        document.forms.myform.elements.startDate.addEventListener("blur", (EO)=> startDateValid(false));
+        document.forms.myform.elements.visitors.addEventListener("blur", (EO)=> visitorsValid(false));
+        document.forms.myform.elements.email.addEventListener("blur", (EO)=> emailValid(false));
+        document.forms.myform.elements.rubric.addEventListener("change", (EO)=> rubricValid(false));
+        document.forms.myform.elements.variants.addEventListener("change", (EO)=> variantsValid(false));
+        document.forms.myform.elements.comments.addEventListener("change", (EO)=> commentsValid(false));
+        document.forms.myform.elements.description.addEventListener("blur", (EO)=> descriptionValid(false));
+
+        document.forms.myform.onsubmit = (EO) => {
+            var ok = true;
+            ok = razrabValid(ok) && ok;
+            ok = nameSiteValid(ok) && ok;
+            ok = urlSiteValid(ok) && ok;
+            ok = startDateValid(ok) && ok;
+            ok = visitorsValid(ok) && ok;
+            ok = emailValid(ok) && ok;
+            ok = rubricValid(ok) && ok;
+            ok = commentsValid(ok) && ok;
+            ok = descriptionValid(ok) && ok;
+
+            if(!ok) {
+                EO.preventDefault();
+            }
+        }
+
+    </script>
+</body>
+</html>
