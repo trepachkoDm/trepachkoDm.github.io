@@ -42,7 +42,7 @@
 * [DrangDrop](https://trepachkoDm.github.io/Lesson6/DRAGNDROP.html)
 
 
-
+   
   
   
   
