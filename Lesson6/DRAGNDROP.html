@@ -2,33 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-        img {
-            width:300px;
-            height: 300px;
-            border: 1px solid red;
-        }
-    </style>
+    <title>Title</title> 
 </head>
 <body>
-<img src="soccer-ball.png" alt="">
-<img src="basket.png" alt="">
-<img src="vol.jpg" alt="">
+<div>
+    <img src="soccer-ball.png" alt="">
+</div>
+<div>
+    <img src="basket.png" alt="">
+</div>
+<div>
+    <img src="vol.jpg" alt="">
+</div>
 <script>
     "use strict";
 
     var images = document.getElementsByTagName("img");
     for (var i = images.length - 1; i>=0; --i){
         var image = images[i];
+
         var posY = image.offsetTop;
         var posX = image.offsetLeft;
+        image.style.cssText='border: solid red 1px; width: 300px; height: 300px';
         image.style.position = "absolute";
         image.style.top = posY + "px";
         image.style.left = posX + "px";
-    }
-
-    onmousedown = function(EO) {
+    };
+    window.onmousedown = function(EO) {
         EO=EO||window.event;
         image = EO.target;
 
@@ -38,24 +38,24 @@
         document.body.appendChild(image);
         moveAt(EO.pageX, EO.pageY);
 
+        image.ondragstart = function() {
+            return false;
+        };
         function moveAt(pageX, pageY) {
             image.style.left = pageX - shiftX + "px";
             image.style.top = pageY - shiftY + "px";
-        }
+        };
 
         document.onmousemove = function(EO) {
             moveAt(EO.pageX, EO.pageY);
-        }
+        };
 
         image.onmouseup = function () {
             document.onmousemove = null;
             image.onmouseup = null;
-        }
+        };
+    };
 
-        image.ondragstart = function() {
-            return false;
-        }
-    }
 </script>
 </body>
 </html>
