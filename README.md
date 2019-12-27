@@ -41,9 +41,10 @@
 * [ValidForm](https://trepachkoDm.github.io/Lesson6/VALID_FORM.html)    
 * [DrangDrop](https://trepachkoDm.github.io/Lesson6/DRAGNDROP.html)
 
-
+7 lesson
+* [СlockDom](https://trepachkoDm.github.io/lesson7/clockDom.html)  
           
-                                     
+                                    
   
   
   
