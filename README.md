@@ -44,8 +44,8 @@
 7 lesson
 * [СlockDom](https://trepachkoDm.github.io/lesson7/clockDom.html)  
           
-                                    
-  
+8 lesson
+* [СlockSvg](https://trepachkoDm.github.io/lesson8/clockSvg.html)
   
   
   
