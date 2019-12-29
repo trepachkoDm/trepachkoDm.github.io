@@ -1,0 +1,16 @@
+#wrap {
+    display: inline-flex;
+}
+#clock {
+	border-radius: 50%;
+	position:relative;
+	background-color: #fce38a;
+
+}
+#hourArrow,
+#secondArrow,
+#minuteArrow {
+	background-color: black;
+	border-radius: 8px;
+	transform-origin: 50% 100%;
+}
