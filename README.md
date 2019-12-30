@@ -48,7 +48,7 @@
 * [СlockSvg](https://trepachkoDm.github.io/lesson8/clockSvg.html)
   
 9 lesson
-* [СlockCanvas](https://trepachkoDm.github.io/lesson9/clockCanvas.html)    
+* [СlockCanvas](https://trepachkoDm.github.io/lesson9/clockCanvas.html)                                
 
     
 
