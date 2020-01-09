@@ -50,8 +50,8 @@
 9 lesson
 * [СlockCanvas](https://trepachkoDm.github.io/lesson9/clockCanvas.html)                                
 
-    
-
+10 lesson
+* [Tennis_dom](https://trepachkoDm.github.io/lesson10/tennis.html
 
 
 
