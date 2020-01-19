@@ -48,10 +48,12 @@
 * [СlockSvg](https://trepachkoDm.github.io/lesson8/clockSvg.html)
   
 9 lesson
-* [СlockCanvas](https://trepachkoDm.github.io/lesson9/clockCanvas.html)                                
+* [СlockCanvas](https://trepachkoDm.github.io/lesson9/clockCanvas.html)   
 
 10 lesson
 * [Tennis_dom](https://trepachkoDm.github.io/lesson10/tennis.html)
 
+11 Project
+* [Arcanoid](https://trepachkoDm.github.io/Arcanoid/arcanoid.html)   
 
 
