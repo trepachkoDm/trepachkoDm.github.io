@@ -145,6 +145,7 @@ function drawBlocks() {
 function drawScore() {
     ctx.font = "25px Arial";
     ctx.fillText("Score: "+score, 10, 300);
+     window.navigator.vibrate(200); 
 }
 
 //обнаружение столкновений
@@ -188,7 +189,6 @@ function draw() {
         else {
             lives--;
             if(!lives) {
-                window.navigator.vibrate([100,30,100,30,100,200,200,30,200,30,200,200,100,30,100,30,100]); 
                 alert("GAME OVER");
                 document.location.reload();
             }
