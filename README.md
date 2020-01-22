@@ -54,7 +54,7 @@
 * [Tennis_dom](https://trepachkoDm.github.io/lesson10/tennis.html)
 
 PROJECT
-* [Arcanoid](https://trepachkoDm.github.io/project.arconoid/arc.html)
+* [Arcanoid](https://trepachkoDm.github.io/Final/a1.html)
 
 
                 
