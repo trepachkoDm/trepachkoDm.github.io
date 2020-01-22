@@ -113,8 +113,10 @@ function drawBall() {
 
     let rancol = rCol();
 
-    if(y  >= canvas.height-10 || y  <= ballRadius+5 || x  >= canvas.width -10|| x <= ballRadius+1 ) {
-        ctx.fillStyle = rancol;} ;
+    if(y  >= canvas.height-10) {
+        ctx.fillStyle = rancol;
+        window.navigator.vibrate(1);
+    }
 
 }
 //рисуем платформу
@@ -178,15 +180,13 @@ function draw() {
 
     if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
         dx = -dx;
-        canvas.navigator.vibrate(10);
     }
     if (y + dy < ballRadius) {
         dy = -dy;
-        canvas.navigator.vibrate(10);
+        window.navigator.vibrate(10);
     } else if (y + dy > canvas.height - ballRadius) {
         if (x > platformX && x < platformX + platformWidth) {
             dy = -dy;
-            canvas.navigator.vibrate(10);
         }
         else {
             lives--;
