@@ -114,7 +114,7 @@ function drawBall() {
     let rancol = rCol();
 
     if(y  >= canvas.height-10 || y  <= ballRadius+5 || x  >= canvas.width -10|| x <= ballRadius+1 ) {
-        ctx.fillStyle = rancol || window.navigator.vibrate(200);} ;
+        ctx.fillStyle = rancol || window.navigator.vibrate(10);} ;
 
 }
 //рисуем платформу
