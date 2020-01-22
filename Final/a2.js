@@ -115,7 +115,7 @@ function drawBall() {
 
     if(y  >= canvas.height-10) {
         ctx.fillStyle = rancol;
-        window.navigator.vibrate(1);
+        window.navigator.vibrate(100);
     }
 
 }
