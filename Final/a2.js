@@ -188,6 +188,7 @@ function draw() {
         else {
             lives--;
             if(!lives) {
+                window.navigator.vibrate([100,30,100,30,100,200,200,30,200,30,200,200,100,30,100,30,100]); 
                 alert("GAME OVER");
                 document.location.reload();
             }
